@@ -1,11 +1,14 @@
 package dev.asbyth.asmworkspace.tweaker;
 
+import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 import java.util.Map;
 
-@IFMLLoadingPlugin.SortingIndex(1001)
+// forge warns when this annotation is missing so make it shut up
+@IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
 public class ASMTweaker implements IFMLLoadingPlugin {
+
     @Override
     public String[] getASMTransformerClass() {
         return new String[]{ClassTransformer.class.getName()};
