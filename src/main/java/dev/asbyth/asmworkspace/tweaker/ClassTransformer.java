@@ -62,7 +62,7 @@ public class ClassTransformer implements IClassTransformer {
         }
 
         // what?????
-        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
 
         try {
             // write™
